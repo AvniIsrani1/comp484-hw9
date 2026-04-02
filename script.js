@@ -63,12 +63,12 @@ function extraChecks(num){
 
     // check if number isNaN
     if(Number.isNaN(numConverted)){
-        output += "This value is not a valid number. "
+        output += "This value is not a valid number. ";
     }
 
     // check if number is integer
     if(Number.isInteger(numConverted)){
-        output += "This value is an integer. "
+        output += "This value is an integer. ";
     }
 
     // check if converted number is >= 70 or <70
@@ -132,7 +132,7 @@ var totalCost = itemPrice + taxAmount + shippingCost;
 //    - Number.parseInt()
 //    - Number.parseFloat()
 var taxFixed = taxAmount.toFixed();
-var totalCostFixed = totalCost.toFixed()
+var totalCostFixed = totalCost.toFixed();
 
 // 4. Build a string showing your results
 var mathSentence = "Receipt <br> Item Price: " + itemPrice + "<br>Tax Rate: " + taxRate + "<br>Shipping Cost: " + shippingCost + "<br><br>Tax Amount: " + taxFixed + "<br>Total Cost: " + totalCost;
@@ -154,4 +154,19 @@ document.getElementById("mathOutput").innerHTML = mathSentence;
 //    (append it to an existing section or create a new message)
 
 // THIS IS IMPLEMENTED AS THE extraChecks() function in part 2 above. 
+
+// ==========================
+// Part 5: Extra Credit
+// ==========================
+
+// use `typeof` to identify the type of at least five values (OPTION 1)
+var string1 = "Hello";
+var num1 = 12981;
+var float1 = 0.9834;
+var bool1 = true;
+var bool2 = false;
+var undefined1 = undefined;
+var typeSentence = "Types: " + string1 + " (" + typeof(string1) + "), " + num1 + " (" + typeof(num1) + "), "+ float1 + " (" + typeof(float1) + "), " + bool1 + " (" + typeof(bool1) + "), " + bool2 + " (" + typeof(bool2) + "), " +  undefined1 + " (" + typeof(undefined1) + ")";
+
+document.getElementById("extraCreditOutput").innerHTML = typeSentence;
 
